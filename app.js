@@ -19,13 +19,13 @@ let redirecturl = 'https://agile-brushlands-73489.herokuapp.com';
 // Routes
 // =============================================================
 
-const hellobot = require('./hellobot');
+const botlogic = require('./botlogic');
 
 app.get('/', (req, res) =>{
 	res.status(200).send('Hello');
 });
 
-app.post('/hello', hellobot);
+app.post('/hello', botlogic);
 
 app.get('/auth', function(req, res){
 	res.sendFile(__dirname + '/public/add_to_slack.html');
